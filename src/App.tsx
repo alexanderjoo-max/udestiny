@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Pillars from "./components/Pillars";
 import Starfield from "./components/Starfield";
 import { LANGS, PARTNERS, SOCIALS, copy, type Lang } from "./i18n";
 
@@ -146,21 +145,18 @@ export default function App() {
 
         <main id="main">
           <section className="hero" id="top">
-            <div className="hero-glyph" aria-hidden="true">
-              命
+            <div className="hero-wobazi">
+              <div className="hero-copy">
+                <img src={wobaziLogo} alt="Wobazi" className="hero-logo" />
+                <p className="kicker">{t.wobazi.kicker}</p>
+                <h1 className="display">{t.wobazi.title}</h1>
+                <p className="hero-lead">{t.wobazi.lead}</p>
+                <a className="btn btn-primary" href={WOBAZI}>
+                  {t.wobazi.cta}
+                </a>
+              </div>
+              <img src={wobaziPhone} alt="Wobazi on iPhone" className="hero-phone" />
             </div>
-            <div className="couplet left" aria-hidden="true">
-              天干地支
-            </div>
-            <div className="couplet right" aria-hidden="true">
-              阴阳五行
-            </div>
-            <div className="hero-inner">
-              <p className="kicker">{t.hero.eyebrow}</p>
-              <h1 className="display">{t.hero.title}</h1>
-              <p className="hero-lead">{t.hero.lead}</p>
-            </div>
-            <Pillars />
           </section>
 
           <section className="section manifesto" id="about">
@@ -194,17 +190,6 @@ export default function App() {
                   </article>
                 ))}
               </div>
-
-              <a className="wobazi-callout reveal" href={WOBAZI} id="wobazi">
-                <div className="wobazi-copy">
-                  <img src={wobaziLogo} alt="Wobazi" className="wobazi-logo" />
-                  <p className="kicker">{t.wobazi.kicker}</p>
-                  <h3>{t.wobazi.title}</h3>
-                  <p>{t.wobazi.lead}</p>
-                  <span className="btn btn-primary wobazi-cta">{t.wobazi.cta}</span>
-                </div>
-                <img src={wobaziPhone} alt="Wobazi on iPhone" className="wobazi-phone" />
-              </a>
             </div>
           </section>
 

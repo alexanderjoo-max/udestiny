@@ -20,8 +20,12 @@ type Copy = {
     eyebrow: string;
     title: string;
     lead: string;
+  };
+  wobazi: {
+    kicker: string;
+    title: string;
+    lead: string;
     cta: string;
-    cta2: string;
   };
   about: {
     kicker: string;
@@ -65,8 +69,12 @@ export const copy: Record<Lang, Copy> = {
       eyebrow: "AI Astrology",
       title: "Your daily guide to a better you",
       lead: "An AI-powered self-understanding platform, guided by wisdom to help you understand yourself, feel empowered, and live with greater happiness.",
-      cta: "Talk on LINE",
-      cta2: "Email us",
+    },
+    wobazi: {
+      kicker: "Also from U Destiny",
+      title: "Plot your BaZi chart",
+      lead: "Wobazi is Master Alice’s Four Pillars reading — free, no account needed.",
+      cta: "Open Wobazi",
     },
     about: {
       kicker: "U Destiny",
@@ -185,8 +193,12 @@ export const copy: Record<Lang, Copy> = {
       eyebrow: "AI Astrology",
       title: "ไกด์รายวัน สู่ตัวคุณที่ดีกว่า",
       lead: "แพลตฟอร์มที่ใช้ AI + ศาสตร์การเข้าใจตัวเอง เป็น guideline เพื่อให้คุณเข้าใจตัวเอง มีพลัง และมีความสุข",
-      cta: "คุยทาง LINE",
-      cta2: "ส่งอีเมล",
+    },
+    wobazi: {
+      kicker: "จาก U Destiny",
+      title: "จัดแผนภูมิปาจื้อของคุณ",
+      lead: "Wobazi คือการอ่านสี่เสาของมาสเตอร์อลิซ — ฟรี ไม่ต้องมีบัญชี",
+      cta: "เปิด Wobazi",
     },
     about: {
       kicker: "U Destiny",
@@ -305,8 +317,12 @@ export const copy: Record<Lang, Copy> = {
       eyebrow: "AI Astrology",
       title: "每日指南，成为更好的自己",
       lead: "一个以 AI 驱动的自我理解平台，以智慧为指引，帮助你认识自己、获得力量，并活得更幸福。",
-      cta: "用 LINE 聊",
-      cta2: "发邮件",
+    },
+    wobazi: {
+      kicker: "同样来自 U Destiny",
+      title: "排出你的八字命盘",
+      lead: "Wobazi 是 Master Alice 的四柱解读 — 免费，无需账号。",
+      cta: "打开 Wobazi",
     },
     about: {
       kicker: "U Destiny",
@@ -437,11 +453,11 @@ export const PARTNERS = [
 ];
 
 export const SOCIALS = [
-  { name: "Facebook", href: "https://www.facebook.com/UdestinyAi" },
-  { name: "Instagram", href: "https://www.instagram.com/udestinyai/" },
-  { name: "LINE", href: "https://lin.ee/iI4t8Bj" },
-  { name: "WhatsApp", href: "https://chat.whatsapp.com/CqiLt1JMmPA98qyM1nzE29" },
-  { name: "Telegram", href: "https://t.me/+OxWWwoXC_8AwZjk1" },
-  { name: "TikTok", href: "https://www.tiktok.com/@udestinyai" },
-  { name: "YouTube", href: "https://www.youtube.com/@UDestiny" },
-];
+  { id: "facebook", name: "Facebook", href: "https://www.facebook.com/UdestinyAi" },
+  { id: "instagram", name: "Instagram", href: "https://www.instagram.com/udestinyai/" },
+  { id: "line", name: "LINE", href: "https://lin.ee/iI4t8Bj" },
+  { id: "whatsapp", name: "WhatsApp", href: "https://chat.whatsapp.com/CqiLt1JMmPA98qyM1nzE29" },
+  { id: "telegram", name: "Telegram", href: "https://t.me/+OxWWwoXC_8AwZjk1" },
+  { id: "tiktok", name: "TikTok", href: "https://www.tiktok.com/@udestinyai" },
+  { id: "youtube", name: "YouTube", href: "https://www.youtube.com/@UDestiny" },
+] as const;

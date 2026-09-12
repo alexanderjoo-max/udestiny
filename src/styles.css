@@ -771,17 +771,73 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px 16px;
-  margin-top: 28px;
+  gap: 12px;
+  margin-top: 32px;
 }
-.socials a {
-  color: var(--muted);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.social {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
   text-decoration: none;
+  transition: transform 0.2s var(--ease), filter 0.2s;
 }
-.socials a:hover { color: var(--secondary); }
+.social svg { width: 22px; height: 22px; display: block; }
+.social:hover { transform: translateY(-3px); filter: brightness(1.12); }
+.social-facebook { background: #1877f2; }
+.social-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.social-line { background: #06c755; }
+.social-whatsapp { background: #25d366; }
+.social-telegram { background: #26a5e4; }
+.social-tiktok { background: #010101; border: 1px solid rgba(255,255,255,0.12); }
+.social-youtube { background: #ff0000; }
+
+.wobazi-callout {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 28px;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(240, 192, 64, 0.28);
+  background:
+    linear-gradient(90deg, rgba(42, 33, 56, 0.55), rgba(20, 19, 24, 0.35));
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 0 40px rgba(240, 192, 64, 0.08);
+  transition: transform 0.3s var(--ease), border-color 0.3s;
+}
+.wobazi-callout:hover {
+  transform: translateY(-4px);
+  border-color: rgba(240, 192, 64, 0.5);
+}
+.wobazi-logo {
+  height: 44px;
+  width: auto;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(240, 192, 64, 0.35));
+}
+.wobazi-copy h3 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin: 4px 0 6px;
+}
+.wobazi-copy p:last-child {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.wobazi-cta {
+  pointer-events: none;
+  padding: 12px 22px !important;
+  font-size: 14px !important;
+  white-space: nowrap;
+}
 .man-card h3 {
   font-family: var(--display);
   font-size: 24px;
@@ -1190,6 +1246,14 @@ html[lang="th"] .display {
   }
   .couplet { display: none; }
   .wobazi-mark { display: none; }
+  .wobazi-callout {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 14px;
+    padding: 22px 20px;
+  }
+  .wobazi-cta { width: 100%; }
 }
 
 @media (max-width: 560px) {
@@ -1201,6 +1265,7 @@ html[lang="th"] .display {
   .hero { padding-top: 28px; }
   .hero-cta { flex-direction: column; width: min(320px, 100%); }
   .hero-cta .btn { width: 100%; }
+  .close-cta .btn-ghost { font-size: 13px; padding: 14px 16px; }
   .el-card { width: calc(50% - 10px); }
   .svc-grid { grid-template-columns: 1fr; }
   .nav { padding: 10px 14px; }

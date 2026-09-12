@@ -7,7 +7,7 @@ const EMAIL = "mailto:info@udestinyglobal.com";
 const WOBAZI = "https://wobazi.com";
 const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
 const wobaziLogo = `${import.meta.env.BASE_URL}wobazi-logo.png`;
-const wobaziScreen = `${import.meta.env.BASE_URL}wobazi-mobile.png`;
+const wobaziPhone = `${import.meta.env.BASE_URL}wobazi-phone.png`;
 
 function useReveal(dep: unknown) {
   useEffect(() => {
@@ -151,14 +151,7 @@ export default function App() {
                 </a>
               </div>
               <div className="hero-visual">
-                <div className="phone" aria-hidden="true">
-                  <div className="phone-bezel">
-                    <div className="phone-island" />
-                    <div className="phone-screen">
-                      <img src={wobaziScreen} alt="" className="phone-scroll" />
-                    </div>
-                  </div>
-                </div>
+                <img src={wobaziPhone} alt="Wobazi on iPhone" className="hero-phone" />
                 <img src={wobaziLogo} alt="Wobazi" className="hero-logo" />
               </div>
             </div>

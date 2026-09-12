@@ -127,10 +127,6 @@ export default function App() {
                 ))}
               </ul>
             </div>
-            <a className="btn btn-primary btn-nav" href={LINE}>
-              <span className="cta-full">{t.nav.cta}</span>
-              <span className="cta-short">{t.nav.ctaShort}</span>
-            </a>
             <button
               className="nav-toggle"
               type="button"
@@ -147,7 +143,6 @@ export default function App() {
           <section className="hero" id="top">
             <div className="hero-wobazi">
               <div className="hero-copy">
-                <img src={wobaziLogo} alt="Wobazi" className="hero-logo" />
                 <p className="kicker">{t.wobazi.kicker}</p>
                 <h1 className="display">{t.wobazi.title}</h1>
                 <p className="hero-lead">{t.wobazi.lead}</p>
@@ -155,7 +150,10 @@ export default function App() {
                   {t.wobazi.cta}
                 </a>
               </div>
-              <img src={wobaziPhone} alt="Wobazi on iPhone" className="hero-phone" />
+              <div className="hero-visual">
+                <img src={wobaziPhone} alt="Wobazi on iPhone" className="hero-phone" />
+                <img src={wobaziLogo} alt="Wobazi" className="hero-logo" />
+              </div>
             </div>
           </section>
 

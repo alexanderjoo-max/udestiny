@@ -492,8 +492,15 @@ main {
   gap: 16px;
   padding: 24px 0 48px;
 }
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 28px;
+}
 .hero-logo {
-  height: 52px;
+  height: 44px;
   width: auto;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 12px rgba(240, 192, 64, 0.4));
@@ -518,11 +525,9 @@ main {
   margin-top: 8px;
 }
 .hero-phone {
-  width: min(100%, 460px);
+  width: min(100%, 420px);
   height: auto;
-  justify-self: center;
   filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.5));
-  transform: translateY(28px);
 }
 
 /* ── Living pillars ── */
@@ -1275,7 +1280,8 @@ html[lang="th"] .hero h1.display {
   }
   .hero h1 { max-width: 14ch; text-align: center; }
   .hero-lead { text-align: center; }
-  .hero-phone { max-width: 280px; transform: translateY(20px); }
+  .hero-phone { max-width: 280px; }
+  .hero-visual { padding-bottom: 16px; }
 }
 
 @media (max-width: 560px) {
@@ -1285,7 +1291,7 @@ html[lang="th"] .hero h1.display {
   .pillar { min-height: 210px; padding: 16px 10px; }
   .pillar-stem { font-size: 40px; }
   .hero { padding-top: 8px; }
-  .hero-logo { height: 40px; }
+  .hero-logo { height: 36px; }
   .hero-phone { max-width: 240px; }
   .close-cta .btn-ghost { font-size: 13px; padding: 14px 16px; }
   .el-card { width: calc(50% - 10px); }

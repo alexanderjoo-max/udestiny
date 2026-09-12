@@ -68,7 +68,7 @@ export const copy: Record<Lang, Copy> = {
     hero: {
       eyebrow: "U Destiny",
       title: "Decode Inner,\nPerform Outer",
-      lead: "An AI-powered self-understanding platform, guided by wisdom to help you understand yourself, feel empowered, and live with greater happiness.",
+      lead: "Understand yourself from within so you can bring your full potential into the outside world.",
     },
     wobazi: {
       kicker: "Also from U Destiny",
@@ -192,7 +192,7 @@ export const copy: Record<Lang, Copy> = {
     hero: {
       eyebrow: "U Destiny",
       title: "Decode Inner,\nPerform Outer",
-      lead: "แพลตฟอร์มที่ใช้ AI + ศาสตร์การเข้าใจตัวเอง เป็น guideline เพื่อให้คุณเข้าใจตัวเอง มีพลัง และมีความสุข",
+      lead: "เข้าใจตัวเองจากข้างใน เพื่อแสดงศักยภาพออกมาอย่างเต็มที่ในโลกภายนอก",
     },
     wobazi: {
       kicker: "จาก U Destiny",
@@ -316,7 +316,7 @@ export const copy: Record<Lang, Copy> = {
     hero: {
       eyebrow: "U Destiny",
       title: "Decode Inner,\nPerform Outer",
-      lead: "一个以 AI 驱动的自我理解平台，以智慧为指引，帮助你认识自己、获得力量，并活得更幸福。",
+      lead: "从内在理解自己，才能把全部潜能带到外面的世界。",
     },
     wobazi: {
       kicker: "同样来自 U Destiny",

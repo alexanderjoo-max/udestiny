@@ -7,7 +7,7 @@ const EMAIL = "mailto:info@udestinyglobal.com";
 const WOBAZI = "https://wobazi.com";
 const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
 const wobaziLogo = `${import.meta.env.BASE_URL}wobazi-logo.png`;
-const wobaziPhone = `${import.meta.env.BASE_URL}wobazi-phone.png`;
+const wobaziScreen = `${import.meta.env.BASE_URL}wobazi-mobile.png`;
 
 function useReveal(dep: unknown) {
   useEffect(() => {
@@ -144,14 +144,21 @@ export default function App() {
             <div className="hero-wobazi">
               <div className="hero-copy">
                 <p className="kicker">{t.wobazi.kicker}</p>
-                <h1 className="display">{t.wobazi.title}</h1>
-                <p className="hero-lead">{t.wobazi.lead}</p>
+                <h1 className="display">{t.hero.title}</h1>
+                <p className="hero-lead">{t.hero.lead}</p>
                 <a className="btn btn-primary" href={WOBAZI}>
                   {t.wobazi.cta}
                 </a>
               </div>
               <div className="hero-visual">
-                <img src={wobaziPhone} alt="Wobazi on iPhone" className="hero-phone" />
+                <div className="phone" aria-hidden="true">
+                  <div className="phone-bezel">
+                    <div className="phone-island" />
+                    <div className="phone-screen">
+                      <img src={wobaziScreen} alt="" className="phone-scroll" />
+                    </div>
+                  </div>
+                </div>
                 <img src={wobaziLogo} alt="Wobazi" className="hero-logo" />
               </div>
             </div>
@@ -198,12 +205,14 @@ export default function App() {
                 <h2 className="display">{t.partners.title}</h2>
               </header>
             </div>
-            <div className="partner-grid wrap" aria-label="Partners">
-              {PARTNERS.map((p) => (
-                <div className="partner-slide" key={p.alt}>
-                  <img src={p.src} alt={p.alt} />
-                </div>
-              ))}
+            <div className="marquee" aria-label="Partners">
+              <div className="marquee-track">
+                {[...PARTNERS, ...PARTNERS].map((p, i) => (
+                  <div className="partner-slide" key={`${p.alt}-${i}`}>
+                    <img src={p.src} alt={p.alt} />
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 

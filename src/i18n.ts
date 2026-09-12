@@ -163,7 +163,7 @@ export const copy: Record<Lang, Copy> = {
         },
       ],
     },
-    partners: { kicker: "With", title: "Our Partner" },
+    partners: { kicker: "With", title: "Our Partners" },
     contact: {
       kicker: "Reach us",
       title: "Contact us",
@@ -287,7 +287,7 @@ export const copy: Record<Lang, Copy> = {
         },
       ],
     },
-    partners: { kicker: "ด้วยกัน", title: "Our Partner" },
+    partners: { kicker: "ด้วยกัน", title: "พาร์ทเนอร์ของเรา" },
     contact: {
       kicker: "ถึงเรา",
       title: "ติดต่อเรา",
@@ -411,7 +411,7 @@ export const copy: Record<Lang, Copy> = {
         },
       ],
     },
-    partners: { kicker: "同行", title: "Our Partner" },
+    partners: { kicker: "同行", title: "我们的合作伙伴" },
     contact: {
       kicker: "找到我们",
       title: "联系我们",

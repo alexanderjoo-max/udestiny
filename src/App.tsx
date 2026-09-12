@@ -198,14 +198,12 @@ export default function App() {
                 <h2 className="display">{t.partners.title}</h2>
               </header>
             </div>
-            <div className="marquee" aria-label="Partners">
-              <div className="marquee-track">
-                {[...PARTNERS, ...PARTNERS].map((p, i) => (
-                  <div className="partner-slide" key={`${p.alt}-${i}`}>
-                    <img src={p.src} alt={p.alt} />
-                  </div>
-                ))}
-              </div>
+            <div className="partner-grid wrap" aria-label="Partners">
+              {PARTNERS.map((p) => (
+                <div className="partner-slide" key={p.alt}>
+                  <img src={p.src} alt={p.alt} />
+                </div>
+              ))}
             </div>
           </section>
 

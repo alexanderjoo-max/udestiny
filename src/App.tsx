@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import Elements from "./components/Elements";
 import Pillars from "./components/Pillars";
 import Starfield from "./components/Starfield";
-import { LANGS, copy, type Lang } from "./i18n";
+import { LANGS, PARTNERS, SOCIALS, copy, type Lang } from "./i18n";
 
+const LINE = "https://lin.ee/iI4t8Bj";
+const EMAIL = "mailto:info@udestinyglobal.com";
 const WOBAZI = "https://wobazi.com";
-const ALICE = "https://wobazi.com/Master-Alice.html";
-const ALICE_SITE = "https://www.masteralice.com";
 const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
 
 function useReveal(dep: unknown) {
@@ -84,17 +83,17 @@ export default function App() {
             <img src={logoSrc} alt="U Destiny" />
           </a>
           <nav className="nav-links" aria-label="Primary">
-            <a href="#practice" onClick={() => setNavOpen(false)}>
-              {t.nav.practice}
+            <a href="#services" onClick={() => setNavOpen(false)}>
+              {t.nav.services}
             </a>
-            <a href="#elements" onClick={() => setNavOpen(false)}>
-              {t.nav.elements}
+            <a href="#about" onClick={() => setNavOpen(false)}>
+              {t.nav.about}
             </a>
-            <a href="#alice" onClick={() => setNavOpen(false)}>
-              {t.nav.alice}
+            <a href="#partners" onClick={() => setNavOpen(false)}>
+              {t.nav.partners}
             </a>
-            <a href="#wobazi" onClick={() => setNavOpen(false)}>
-              {t.nav.wobazi}
+            <a href="#contact" onClick={() => setNavOpen(false)}>
+              {t.nav.contact}
             </a>
           </nav>
           <div className="nav-actions">
@@ -127,7 +126,7 @@ export default function App() {
                 ))}
               </ul>
             </div>
-            <a className="btn btn-primary btn-nav" href={WOBAZI}>
+            <a className="btn btn-primary btn-nav" href={LINE}>
               <span className="cta-full">{t.nav.cta}</span>
               <span className="cta-short">{t.nav.ctaShort}</span>
             </a>
@@ -159,26 +158,27 @@ export default function App() {
               <h1 className="display">{t.hero.title}</h1>
               <p className="hero-lead">{t.hero.lead}</p>
               <div className="hero-cta">
-                <a className="btn btn-primary" href={WOBAZI}>
-                  {t.hero.cta} <span className="btn-char">龙</span>
+                <a className="btn btn-primary" href={LINE}>
+                  {t.hero.cta}
                 </a>
-                <a className="btn btn-ghost" href={ALICE}>
+                <a className="btn btn-ghost" href={EMAIL}>
                   {t.hero.cta2}
                 </a>
               </div>
-              <p className="hero-note">{t.hero.note}</p>
             </div>
             <Pillars />
-            <p className="pillar-legend">Stem above · Branch below · Day is you</p>
           </section>
 
-          <section className="section manifesto" id="manifesto">
+          <section className="section" id="services">
             <div className="wrap">
-              <p className="kicker reveal">{t.manifesto.kicker}</p>
-              <div className="manifesto-grid">
-                {t.manifesto.items.map((item) => (
-                  <article className="man-card reveal" key={item.hanzi}>
-                    <div className="man-hanzi">{item.hanzi}</div>
+              <header className="elements-head reveal">
+                <p className="kicker">{t.services.kicker}</p>
+                <h2 className="display">{t.services.title}</h2>
+              </header>
+              <div className="svc-grid">
+                {t.services.items.map((item) => (
+                  <article className="svc-card reveal" key={item.title}>
+                    <div className="svc-seal">{item.seal}</div>
                     <h3>{item.title}</h3>
                     <p>{item.body}</p>
                   </article>
@@ -187,90 +187,59 @@ export default function App() {
             </div>
           </section>
 
-          <section className="section" id="practice">
+          <section className="section manifesto" id="about">
             <div className="wrap">
-              <div className="practice-head">
-                <div className="reveal">
-                  <p className="kicker">{t.practice.kicker}</p>
-                  <h2 className="display">{t.practice.title}</h2>
-                </div>
-                <p className="section-lead reveal">{t.practice.lead}</p>
-              </div>
-              <div className="practice-grid">
-                {t.practice.items.map((item) => (
-                  <article className="prac-card reveal" key={item.title}>
-                    <div className="prac-seal">{item.hanzi}</div>
-                    <div>
-                      <h3>{item.title}</h3>
-                      <p>{item.body}</p>
-                    </div>
+              <p className="kicker reveal">{t.about.kicker}</p>
+              <div className="manifesto-grid">
+                {t.about.items.map((item) => (
+                  <article className="man-card reveal" key={item.title}>
+                    <div className="man-num">{item.n}</div>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
                   </article>
                 ))}
               </div>
+              <p className="about-tag reveal">{t.about.tagline}</p>
             </div>
           </section>
 
-          <Elements lang={lang} />
-
-          <section className="section" id="alice">
+          <section className="section partners" id="partners">
             <div className="wrap">
-              <header className="alice-head reveal">
-                <p className="kicker">{t.alice.kicker}</p>
-                <h2 className="display">{t.alice.title}</h2>
-                <p className="section-lead">{t.alice.lead}</p>
+              <header className="elements-head reveal">
+                <p className="kicker">{t.partners.kicker}</p>
+                <h2 className="display">{t.partners.title}</h2>
               </header>
-              <div className="alice-grid">
-                {t.alice.pillars.map((p) => (
-                  <article className="alice-pillar reveal" key={p.hanzi}>
-                    <div className="hanzi">{p.hanzi}</div>
-                    <div className="lab">{p.label}</div>
-                    <p className="theme">{p.theme}</p>
-                    <ul>
-                      {p.lines.map((line) => (
-                        <li key={line}>{line}</li>
-                      ))}
-                    </ul>
-                  </article>
+            </div>
+            <div className="marquee" aria-label="Partners">
+              <div className="marquee-track">
+                {[...PARTNERS, ...PARTNERS].map((p, i) => (
+                  <div className="partner-slide" key={`${p.alt}-${i}`}>
+                    <img src={p.src} alt={p.alt} />
+                  </div>
                 ))}
               </div>
             </div>
           </section>
 
-          <section className="section wobazi" id="wobazi">
-            <div className="wrap">
-              <div className="wobazi-panel reveal">
-                <div>
-                  <p className="kicker">{t.wobazi.kicker}</p>
-                  <h2 className="display">{t.wobazi.title}</h2>
-                  <p className="section-lead">{t.wobazi.lead}</p>
-                  <ul className="wobazi-points">
-                    {t.wobazi.points.map((p) => (
-                      <li key={p}>{p}</li>
-                    ))}
-                  </ul>
-                  <a className="btn btn-primary" href={WOBAZI}>
-                    {t.wobazi.cta}
-                  </a>
-                </div>
-                <div className="wobazi-mark" aria-hidden="true">
-                  八字
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="section close" id="begin">
+          <section className="section close" id="contact">
             <div className="wrap reveal">
-              <p className="kicker">{t.close.kicker}</p>
-              <h2 className="display">{t.close.title}</h2>
-              <p className="section-lead">{t.close.lead}</p>
+              <p className="kicker">{t.contact.kicker}</p>
+              <h2 className="display">{t.contact.title}</h2>
+              <p className="section-lead">{t.contact.lead}</p>
               <div className="close-cta">
-                <a className="btn btn-primary" href={WOBAZI}>
-                  {t.close.cta}
+                <a className="btn btn-primary" href={LINE}>
+                  {t.contact.line}
                 </a>
-                <a className="btn btn-ghost" href={ALICE_SITE}>
-                  {t.close.cta2}
+                <a className="btn btn-ghost" href={EMAIL}>
+                  {t.contact.emailLabel}: info@udestinyglobal.com
                 </a>
+              </div>
+              <div className="socials">
+                {SOCIALS.map((s) => (
+                  <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer">
+                    {s.name}
+                  </a>
+                ))}
               </div>
             </div>
           </section>
@@ -283,37 +252,34 @@ export default function App() {
               <p>{t.footer.blurb}</p>
             </div>
             <div>
-              <h4>{t.footer.house}</h4>
+              <h4>{t.footer.contact}</h4>
               <ul>
                 <li>
-                  <a href={ALICE_SITE}>masteralice.com</a>
+                  <a href={EMAIL}>info@udestinyglobal.com</a>
                 </li>
                 <li>
-                  <a href="https://www.udestinyglobal.com/en">udestinyglobal.com</a>
+                  <a href={LINE}>LINE</a>
                 </li>
                 <li>
-                  <span>{t.footer.bangkok}</span>
+                  <a href="#about">{t.footer.about}</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4>{t.footer.products}</h4>
+              <h4>{t.nav.services}</h4>
               <ul>
                 <li>
-                  <a href={WOBAZI}>Wobazi</a>
+                  <a href="#services">{t.nav.services}</a>
                 </li>
                 <li>
-                  <a href={ALICE}>Master Alice</a>
-                </li>
-                <li>
-                  <a href="https://wobazi.com/what-is-bazi">What is Bāzì</a>
+                  <a href={WOBAZI}>{t.footer.wobazi}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="wrap footer-bottom">
-            <span>© {new Date().getFullYear()} Ultimate Destiny</span>
-            <span>命 · 运 · 风水</span>
+            <span>{t.footer.copy}</span>
+            <span>U Destiny</span>
           </div>
         </footer>
       </div>

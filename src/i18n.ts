@@ -8,10 +8,10 @@ export const LANGS: { id: Lang; label: string }[] = [
 
 type Copy = {
   nav: {
-    practice: string;
-    wobazi: string;
-    alice: string;
-    elements: string;
+    services: string;
+    about: string;
+    partners: string;
+    contact: string;
     cta: string;
     ctaShort: string;
   };
@@ -22,487 +22,393 @@ type Copy = {
     lead: string;
     cta: string;
     cta2: string;
-    note: string;
   };
-  manifesto: { kicker: string; items: { title: string; body: string; hanzi: string }[] };
-  practice: {
+  about: {
+    kicker: string;
+    items: { n: string; title: string; body: string }[];
+    tagline: string;
+  };
+  services: {
+    kicker: string;
+    title: string;
+    items: { seal: string; title: string; body: string }[];
+  };
+  partners: { kicker: string; title: string };
+  contact: {
     kicker: string;
     title: string;
     lead: string;
-    items: { hanzi: string; title: string; body: string }[];
-  };
-  elements: {
-    kicker: string;
-    title: string;
-    lead: string;
-    generating: string;
-    quote: string;
-    quoteAttr: string;
-  };
-  alice: {
-    kicker: string;
-    title: string;
-    lead: string;
-    pillars: { hanzi: string; label: string; theme: string; lines: string[] }[];
-  };
-  wobazi: {
-    kicker: string;
-    title: string;
-    lead: string;
-    points: string[];
-    cta: string;
-  };
-  close: {
-    kicker: string;
-    title: string;
-    lead: string;
-    cta: string;
-    cta2: string;
+    emailLabel: string;
+    line: string;
   };
   footer: {
     blurb: string;
-    house: string;
-    products: string;
-    bangkok: string;
+    contact: string;
+    about: string;
+    wobazi: string;
+    copy: string;
   };
 };
 
 export const copy: Record<Lang, Copy> = {
   en: {
     nav: {
-      practice: "Practice",
-      wobazi: "Wobazi",
-      alice: "Master Alice",
-      elements: "Five Elements",
-      cta: "Plot your chart",
-      ctaShort: "Plot chart",
+      services: "Our services",
+      about: "About",
+      partners: "Partners",
+      contact: "Contact",
+      cta: "Talk on LINE",
+      ctaShort: "LINE",
     },
-    splash: { waiting: "Aligning the heavenly stems…" },
+    splash: { waiting: "Opening the chart…" },
     hero: {
-      eyebrow: "Ultimate Destiny",
-      title: "Your chart was written the moment you arrived.",
-      lead: "Eight characters. Four pillars. A two-thousand-year-old art, still startlingly precise — read by Master Alice, and now held in your hand.",
-      cta: "Plot your chart",
-      cta2: "Sit with Master Alice",
-      note: "Free to begin · No account needed",
+      eyebrow: "AI Astrology",
+      title: "Your daily guide to a better you",
+      lead: "An AI-powered self-understanding platform, guided by wisdom to help you understand yourself, feel empowered, and live with greater happiness.",
+      cta: "Talk on LINE",
+      cta2: "Email us",
     },
-    manifesto: {
-      kicker: "What the chart is for",
+    about: {
+      kicker: "U Destiny",
       items: [
         {
-          hanzi: "识己",
-          title: "Know who you truly are.",
-          body: "Your nature, your strengths, your blind spots — read from the moment you were born.",
+          n: "1",
+          title: "The Companion",
+          body: "A thoughtful companion by your side every day, offering guidance, understanding you, and staying with you through every moment.",
         },
         {
-          hanzi: "择时",
-          title: "Move when the time is right.",
-          body: "See the years that reward your boldest decisions, and the seasons that ask you to wait.",
+          n: "2",
+          title: "Decode Inner, Perform Outer",
+          body: "Understand yourself from within so you can bring your full potential into the outside world.",
         },
         {
-          hanzi: "知人",
-          title: "Find the people you belong with.",
-          body: "Discover whose energy harmonizes with yours — in love, in work, in the rooms you share.",
+          n: "3",
+          title: "Positive Energy",
+          body: "We want you to feel positive energy every day, living with more confidence, balance, and happiness.",
         },
       ],
+      tagline: "Your daily guide to a better you",
     },
-    practice: {
-      kicker: "The house",
-      title: "Eastern metaphysics, used.",
-      lead: "U Destiny is Master Alice’s Bangkok practice: human potential and organizational development through BaZi and Feng Shui. Come for a reading, or begin with the chart in your pocket.",
+    services: {
+      kicker: "The work",
+      title: "Our services",
       items: [
         {
-          hanzi: "八字",
-          title: "BaZi · Four Pillars",
-          body: "Your exact birth moment converted into eight characters — the blueprint of who you are, and the decades that will carry you.",
+          seal: "面",
+          title: "Face Reading",
+          body: "The physiognomy of the face tells of fortune and destiny — money, work, and love.",
         },
         {
-          hanzi: "风水",
-          title: "Feng Shui · Space & year",
-          body: "The rooms, directions, and annual energies that either drain you or quietly work on your behalf.",
+          seal: "隐",
+          title: "Secret Character",
+          body: "Meet the hidden character of the month, and the energy it asks you to use.",
         },
         {
-          hanzi: "企业",
-          title: "Organizations",
-          body: "Corporate training and destiny consulting for leaders and teams — timing, talent, and the climate of a company.",
+          seal: "纸",
+          title: "Lucky Wallpaper",
+          body: "Enhance auspiciousness according to the elements — work, popularity, fortune, fewer obstacles.",
         },
         {
-          hanzi: "AI",
-          title: "U Destiny · AI astrology",
-          body: "The house’s living platform. Wobazi is the BaZi chart you hold; the rest of the reading still happens with Alice.",
+          seal: "数",
+          title: "Lucky Number",
+          body: "Personalized lucky numbers for phones, plates, and LINE IDs.",
+        },
+        {
+          seal: "问",
+          title: "5 Fortune Questions",
+          body: "A daily horoscope beside you for 365 days: career, finance, love, tips, and advice.",
+        },
+        {
+          seal: "言",
+          title: "Daily Quote",
+          body: "Daily advice to keep you close to what — and who — matters.",
+        },
+        {
+          seal: "爱",
+          title: "Love Horoscope",
+          body: "Monthly love fortune, with blessings and practices to keep love fresh.",
+        },
+        {
+          seal: "周",
+          title: "Weekly Character",
+          body: "What you will meet this week, and the character that carries you through it.",
+        },
+        {
+          seal: "日",
+          title: "Lucky Day",
+          body: "Days to start a job, a business, a car, a contract.",
+        },
+        {
+          seal: "宅",
+          title: "Bazi",
+          body: "Feng Shui tips and advice for home, office, factory, and company.",
+        },
+        {
+          seal: "护",
+          title: "Mutelulu Amulet",
+          body: "Scented candles, stones, lucky bracelets, and other spiritual tools.",
+        },
+        {
+          seal: "文",
+          title: "Mutelulu Content",
+          body: "Articles for the spiritually curious.",
         },
       ],
     },
-    elements: {
-      kicker: "五行",
-      title: "Five forces, always in motion.",
-      lead: "Everything in a chart belongs to Wood, Fire, Earth, Metal, or Water. Balance — or the lack of it — is the weather of a life.",
-      generating: "Generating cycle · each nourishes the next",
-      quote:
-        "BaZi is a weather forecast, not a prison sentence. The chart shows the terrain — you still choose how to walk it.",
-      quoteAttr: "The metaphor masters use",
-    },
-    alice: {
-      kicker: "The reader",
-      title: "Master Alice",
-      lead: "A Bangkok-based Chinese metaphysics teacher, destiny consultant, and corporate trainer. Wobazi is her BaZi reading. U Destiny is the house around it.",
-      pillars: [
-        {
-          hanzi: "年",
-          label: "Year · Roots",
-          theme: "Where she comes from",
-          lines: [
-            "M.A. Communication Arts, Bangkok University",
-            "B.A. Mass Communication, Kasetsart University",
-            "Marketing studies, Leeds Metropolitan University",
-          ],
-        },
-        {
-          hanzi: "月",
-          label: "Month · Career",
-          theme: "The rooms she worked in",
-          lines: [
-            "Former marketing communications executive",
-            "Huawei · JobsDB · Samsung · Lenovo",
-            "Canon · Toshiba · Grab",
-          ],
-        },
-        {
-          hanzi: "日",
-          label: "Day · Self",
-          theme: "The work that is hers",
-          lines: [
-            "15+ years in BaZi, Feng Shui, face reading, destiny consulting",
-            "43+ professional certificates — Hong Kong, Singapore, Malaysia",
-            "Certified Thai Birkman practitioner · Sound Healing trainer",
-          ],
-        },
-        {
-          hanzi: "时",
-          label: "Hour · Legacy",
-          theme: "What she leaves in the room",
-          lines: [
-            "10,000+ students and clients across 35+ countries",
-            "Trainer and speaker for 70+ organizations",
-            "Wobazi — her reading, in your pocket",
-          ],
-        },
-      ],
-    },
-    wobazi: {
-      kicker: "In your pocket",
-      title: "Wobazi is her reading.",
-      lead: "Plot your Four Pillars in seconds — solar or lunar birth dates, no account required. Sign in only if you want the chart saved.",
-      points: [
-        "Your Day Master, element balance, and luck pillars",
-        "Today’s fortune, the year ahead, the people who fit",
-        "Ask the Oracle — AI guidance drawn from your chart",
-      ],
-      cta: "Open Wobazi",
-    },
-    close: {
-      kicker: "Begin",
-      title: "Your four pillars are waiting.",
-      lead: "The chart is one-third of the story. Timing and the rooms you inhabit write the rest. Start with eight characters.",
-      cta: "Plot your chart",
-      cta2: "Visit Master Alice",
+    partners: { kicker: "With", title: "Our Partner" },
+    contact: {
+      kicker: "Reach us",
+      title: "Contact us",
+      lead: "Write, call on LINE, or find U Destiny on the channels you already use.",
+      emailLabel: "E-mail",
+      line: "LINE",
     },
     footer: {
-      blurb: "A house of Chinese metaphysics in Bangkok. BaZi, Feng Shui, and AI astrology — from Ultimate Destiny.",
-      house: "The house",
-      products: "The reading",
-      bangkok: "Bangkok",
+      blurb: "An AI-powered self-understanding platform. Your daily guide to a better you.",
+      contact: "Contact us",
+      about: "About us",
+      wobazi: "Also on Wobazi",
+      copy: "Copyright By UDestiny, All Rights Reserved.",
     },
   },
   th: {
     nav: {
-      practice: "ศาสตร์",
-      wobazi: "Wobazi",
-      alice: "มาสเตอร์อลิซ",
-      elements: "ห้าธาตุ",
-      cta: "จัดแผนภูมิของคุณ",
-      ctaShort: "จัดแผนภูมิ",
+      services: "บริการของเรา",
+      about: "เกี่ยวกับเรา",
+      partners: "พาร์ทเนอร์",
+      contact: "ติดต่อเรา",
+      cta: "คุยทาง LINE",
+      ctaShort: "LINE",
     },
-    splash: { waiting: "กำลังจัดก้านฟ้า…" },
+    splash: { waiting: "กำลังเปิดดวง…" },
     hero: {
-      eyebrow: "Ultimate Destiny",
-      title: "แผนภูมิของคุณถูกเขียนตั้งแต่วินาทีที่คุณมาถึง",
-      lead: "แปดตัวอักษร สี่เสา ศาสตร์เก่าแก่สองพันปี ที่ยังแม่นยำจนน่าทึ่ง — อ่านโดยมาสเตอร์อลิซ และอยู่ในมือคุณ",
-      cta: "จัดแผนภูมิของคุณ",
-      cta2: "พบมาสเตอร์อลิซ",
-      note: "เริ่มฟรี · ไม่ต้องมีบัญชี",
+      eyebrow: "AI Astrology",
+      title: "ไกด์รายวัน สู่ตัวคุณที่ดีกว่า",
+      lead: "แพลตฟอร์มที่ใช้ AI + ศาสตร์การเข้าใจตัวเอง เป็น guideline เพื่อให้คุณเข้าใจตัวเอง มีพลัง และมีความสุข",
+      cta: "คุยทาง LINE",
+      cta2: "ส่งอีเมล",
     },
-    manifesto: {
-      kicker: "แผนภูมิมีไว้ทำอะไร",
+    about: {
+      kicker: "U Destiny",
       items: [
         {
-          hanzi: "识己",
-          title: "รู้จักตัวเองอย่างแท้จริง",
-          body: "นิสัย จุดแข็ง จุดบอด — อ่านได้จากวินาทีที่คุณเกิด",
+          n: "1",
+          title: "The Companion",
+          body: "เพื่อนคู่คิดที่อยู่กับคุณทุกวัน ให้คำแนะนำ เข้าใจคุณ และอยู่เคียงข้างในทุกช่วงเวลา",
         },
         {
-          hanzi: "择时",
-          title: "ขยับเมื่อเวลาเหมาะ",
-          body: "เห็นปีที่การตัดสินใจกล้าจะได้รับรางวัล และฤดูที่ควรรอ",
+          n: "2",
+          title: "Decode Inner, Perform Outer",
+          body: "เข้าใจตัวเองจากข้างใน เพื่อแสดงศักยภาพออกมาอย่างเต็มที่ในโลกภายนอก",
         },
         {
-          hanzi: "知人",
-          title: "พบคนที่พลังตรงกับคุณ",
-          body: "ค้นพบว่าพลังของใครกลมกลืนกับคุณ — ในรัก ในงาน ในห้องที่อยู่ร่วม",
+          n: "3",
+          title: "Positive Energy",
+          body: "อยากให้คุณมีพลังบวกทุกวัน ใช้ชีวิตอย่างมั่นใจ สมดุล และมีความสุขมากขึ้น",
         },
       ],
+      tagline: "Your daily guide to a better you",
     },
-    practice: {
-      kicker: "สำนัก",
-      title: "ศาสตร์จีน ที่ใช้ได้จริง",
-      lead: "U Destiny คือสำนักของมาสเตอร์อลิซในกรุงเทพฯ — ศักยภาพมนุษย์และการพัฒนาองค์กรด้วยปาจื้อและฮวงจุ้ย มาอ่านดวง หรือเริ่มจากแผนภูมิในกระเป๋า",
+    services: {
+      kicker: "งานของเรา",
+      title: "บริการของเรา",
       items: [
         {
-          hanzi: "八字",
-          title: "ปาจื้อ · สี่เสา",
-          body: "วินาทีเกิดถูกแปลงเป็นแปดตัวอักษร — แบบแปลนของตัวคุณ และทศวรรษที่จะพาไป",
+          seal: "面",
+          title: "โหงวเฮ้ง",
+          body: "โหงวเฮ้ง ใบหน้าบอกวาสนา ชะตาชีวิต — การเงิน การงาน ความรัก",
         },
         {
-          hanzi: "风水",
-          title: "ฮวงจุ้ย · พื้นที่และปี",
-          body: "ห้อง ทิศ และพลังรายปี ที่จะดูดคุณหรือทำงานให้คุณอย่างเงียบ ๆ",
+          seal: "隐",
+          title: "คาแรกเตอร์ที่ซ่อนในตัวคุณ",
+          body: "พบคาแรกเตอร์ที่ซ่อนในตัวคุณ และพลังบวกที่พร้อมผลักดันให้ก้าวผ่านทุกอย่าง",
         },
         {
-          hanzi: "企业",
-          title: "องค์กร",
-          body: "อบรมและที่ปรึกษาโชคชะตาสำหรับผู้นำและทีม — จังหวะ พรสวรรค์ และภูมิอากาศของบริษัท",
+          seal: "纸",
+          title: "วอลเปเปอร์มงคล",
+          body: "เสริมมงคลตามธาตุ สำหรับเพิ่มโอกาสงาน เสริมเมตตา กระตุ้นโชคลาภ แคล้วคลาดอุปสรรค",
         },
         {
-          hanzi: "AI",
-          title: "U Destiny · โหราศาสตร์ AI",
-          body: "แพลตฟอร์มของสำนัก Wobazi คือแผนปาจื้อในมือคุณ ส่วนการอ่านยังอยู่กับอลิซ",
+          seal: "数",
+          title: "เลขมงคลประจำตัว",
+          body: "แนะนำเลขดีเสริมดวงเฉพาะคุณ ทั้งเบอร์โทร เลขทะเบียนรถ และเลขเสริมหลังไลน์",
+        },
+        {
+          seal: "问",
+          title: "คำถามดวง 5 คำถาม",
+          body: "ดวงประจำวัน เหมือนมีซินแสอยู่ข้างตัว 365 วัน — การงาน การเงิน ความรัก เคล็ดเสริมดวง",
+        },
+        {
+          seal: "言",
+          title: "คำพลังบวกประจำวัน",
+          body: "คำแนะนำประจำวัน ให้คุณใกล้ชิดกับสิ่งที่สำคัญ",
+        },
+        {
+          seal: "爱",
+          title: "ดวงความรัก",
+          body: "ดวงความรักประจำเดือน พร้อมเคล็ดและคาถาสายมูเสริมรัก",
+        },
+        {
+          seal: "周",
+          title: "คาแรกเตอร์ประจำสัปดาห์",
+          body: "ดวงรายสัปดาห์ — คุณจะพบอะไรบ้างในสัปดาห์นี้",
+        },
+        {
+          seal: "日",
+          title: "ฤกษ์ดี",
+          body: "วันเริ่มงานใหม่ วันเริ่มธุรกิจ วันออกรถ วันเซ็นสัญญา",
+        },
+        {
+          seal: "宅",
+          title: "เคล็ดลับฮวงจุ้ย",
+          body: "เคล็ดลับฮวงจุ้ยและทิปต่างๆ สำหรับบ้าน ออฟฟิศ โรงงาน บริษัท",
+        },
+        {
+          seal: "护",
+          title: "สินค้าและบริการ",
+          body: "สินค้าและบริการสายมู เช่น เทียนหอม หิน กำไลมงคล",
+        },
+        {
+          seal: "文",
+          title: "บทความสายมู",
+          body: "สายมูต้องมา — บทความมูเตลูๆ",
         },
       ],
     },
-    elements: {
-      kicker: "五行",
-      title: "ห้าพลัง ที่ไม่เคยนิ่ง",
-      lead: "ทุกอย่างในแผนภูมิเป็นไม้ ไฟ ดิน โลหะ หรือน้ำ ความสมดุล — หรือการขาดมัน — คืออากาศของชีวิต",
-      generating: "วงจรเกื้อ · แต่ละธาตุหล่อเลี้ยงถัดไป",
-      quote:
-        "ปาจื้อคือพยากรณ์อากาศ ไม่ใช่คำพิพากษา แผนภูมิชี้ภูมิประเทศ — คุณยังเลือกวิธีเดินเอง",
-      quoteAttr: "คำอุปมาที่ซินแสใช้",
-    },
-    alice: {
-      kicker: "ผู้ถอดรหัส",
-      title: "มาสเตอร์อลิซ",
-      lead: "วิทยากรศาสตร์จีน ที่ปรึกษาโชคชะตา และวิทยากรองค์กรในกรุงเทพฯ Wobazi คือการอ่านปาจื้อของเธอ U Destiny คือสำนักที่โอบมันไว้",
-      pillars: [
-        {
-          hanzi: "年",
-          label: "ปี · ราก",
-          theme: "ที่มา",
-          lines: [
-            "ปริญญาโทนิเทศศาสตร์ มหาวิทยาลัยกรุงเทพ",
-            "ปริญญาตรีสื่อสารมวลชน มหาวิทยาลัยเกษตรศาสตร์",
-            "การตลาด Leeds Metropolitan University",
-          ],
-        },
-        {
-          hanzi: "月",
-          label: "เดือน · การงาน",
-          theme: "ห้องที่เคยทำงาน",
-          lines: [
-            "อดีตผู้บริหารงานสื่อสารการตลาด",
-            "Huawei · JobsDB · Samsung · Lenovo",
-            "Canon · Toshiba · Grab",
-          ],
-        },
-        {
-          hanzi: "日",
-          label: "วัน · ตัวตน",
-          theme: "งานที่เป็นของเธอ",
-          lines: [
-            "กว่า 15 ปีในปาจื้อ ฮวงจุ้ย การอ่านใบหน้า ที่ปรึกษาโชคชะตา",
-            "ประกาศนียบัตรกว่า 43 ใบ — ฮ่องกง สิงคโปร์ มาเลเซีย",
-            "Certified Thai Birkman · Sound Healing Trainer",
-          ],
-        },
-        {
-          hanzi: "时",
-          label: "ยาม · สิ่งที่ส่งต่อ",
-          theme: "สิ่งที่ทิ้งไว้ในห้อง",
-          lines: [
-            "นักเรียนและลูกค้ากว่า 10,000 คน ใน 35+ ประเทศ",
-            "วิทยากรให้กว่า 70 องค์กร",
-            "Wobazi — การอ่านของเธอ อยู่ในกระเป๋าคุณ",
-          ],
-        },
-      ],
-    },
-    wobazi: {
-      kicker: "ในกระเป๋าคุณ",
-      title: "Wobazi คือการอ่านของเธอ",
-      lead: "จัดสี่เสาในไม่กี่วินาที — วันเกิดสุริยคติหรือจันทรคติ ไม่ต้องมีบัญชี ล็อกอินเฉพาะเมื่ออยากบันทึก",
-      points: [
-        "วันมาสเตอร์ สมดุลธาตุ และเสาโชค",
-        "โชควันนี้ ปีที่มา คนที่เข้ากัน",
-        "ถามเทพพยากรณ์ — คำแนะนำจากแผนภูมิของคุณ",
-      ],
-      cta: "เปิด Wobazi",
-    },
-    close: {
-      kicker: "เริ่ม",
-      title: "สี่เสาของคุณรออยู่",
-      lead: "แผนภูมิคือหนึ่งในสามของเรื่อง จังหวะและห้องที่คุณอยู่เขียนส่วนที่เหลือ เริ่มจากแปดตัวอักษร",
-      cta: "จัดแผนภูมิของคุณ",
-      cta2: "ไปที่มาสเตอร์อลิซ",
+    partners: { kicker: "ด้วยกัน", title: "Our Partner" },
+    contact: {
+      kicker: "ถึงเรา",
+      title: "ติดต่อเรา",
+      lead: "เขียนอีเมล คุยทาง LINE หรือหา U Destiny ในช่องทางที่คุณใช้อยู่",
+      emailLabel: "E-mail",
+      line: "LINE",
     },
     footer: {
-      blurb: "สำนักศาสตร์จีนในกรุงเทพฯ ปาจื้อ ฮวงจุ้ย และโหราศาสตร์ AI — จาก Ultimate Destiny",
-      house: "สำนัก",
-      products: "การอ่าน",
-      bangkok: "กรุงเทพฯ",
+      blurb: "แพลตฟอร์ม AI เพื่อเข้าใจตัวเอง ไกด์รายวันสู่ตัวคุณที่ดีกว่า",
+      contact: "ติดต่อเรา",
+      about: "เกี่ยวกับเรา",
+      wobazi: "ดูดวงบน Wobazi",
+      copy: "Copyright By UDestiny, All Rights Reserved.",
     },
   },
   zh: {
     nav: {
-      practice: "馆务",
-      wobazi: "Wobazi",
-      alice: "Master Alice",
-      elements: "五行",
-      cta: "排出你的命盘",
-      ctaShort: "排盘",
+      services: "我们的服务",
+      about: "关于",
+      partners: "合作伙伴",
+      contact: "联系我们",
+      cta: "用 LINE 聊",
+      ctaShort: "LINE",
     },
-    splash: { waiting: "天干对齐中…" },
+    splash: { waiting: "正在开盘…" },
     hero: {
-      eyebrow: "Ultimate Destiny",
-      title: "你的命盘，写在你抵达的那一刻。",
-      lead: "八个字。四根柱。两千年的古老技艺，至今精确得令人心惊 — 由 Master Alice 解读，也可以握在手里。",
-      cta: "排出你的命盘",
-      cta2: "约见 Master Alice",
-      note: "开始免费 · 无需账号",
+      eyebrow: "AI Astrology",
+      title: "每日指南，成为更好的自己",
+      lead: "一个以 AI 驱动的自我理解平台，以智慧为指引，帮助你认识自己、获得力量，并活得更幸福。",
+      cta: "用 LINE 聊",
+      cta2: "发邮件",
     },
-    manifesto: {
-      kicker: "命盘何用",
+    about: {
+      kicker: "U Destiny",
       items: [
         {
-          hanzi: "识己",
-          title: "真正认识你自己。",
-          body: "性情、长处与盲点 — 都写在你诞生的那一刻。",
+          n: "1",
+          title: "The Companion",
+          body: "一位体贴的伴侣，每天在你身边给予指引、理解你，并陪伴你度过每一刻。",
         },
         {
-          hanzi: "择时",
-          title: "在对的时机行动。",
-          body: "看见那些奖赏果敢决定的年份，也看见该等待的季节。",
+          n: "2",
+          title: "Decode Inner, Perform Outer",
+          body: "从内在理解自己，才能把全部潜能带到外面的世界。",
         },
         {
-          hanzi: "知人",
-          title: "找到属于你的人。",
-          body: "发现谁的能量与你相合 — 在感情、在工作、在你们共享的房间里。",
+          n: "3",
+          title: "Positive Energy",
+          body: "希望你每天都能感到正向的能量，更自信、更平衡、更幸福地生活。",
         },
       ],
+      tagline: "Your daily guide to a better you",
     },
-    practice: {
-      kicker: "馆",
-      title: "拿来用的东方玄学。",
-      lead: "U Destiny 是 Master Alice 在曼谷的馆：以八字与风水做潜能与组织发展。来做一次解读，或先从口袋里的命盘开始。",
+    services: {
+      kicker: "馆务",
+      title: "我们的服务",
       items: [
         {
-          hanzi: "八字",
-          title: "八字 · 四柱",
-          body: "把精确的出生时刻转成八个字 — 关于你是谁的蓝图，以及将托举你的十年。",
+          seal: "面",
+          title: "面相",
+          body: "面相说出命运 — 财运、事业、感情。",
         },
         {
-          hanzi: "风水",
-          title: "风水 · 空间与流年",
-          body: "房间、方位、年度之气 — 它们或消耗你，或默默替你做事。",
+          seal: "隐",
+          title: "隐藏性格",
+          body: "认识这个月藏在你身上的性格，以及它要你使用的能量。",
         },
         {
-          hanzi: "企业",
-          title: "组织",
-          body: "为企业领袖与团队做培训与命理咨询 — 时机、人才、公司气候。",
+          seal: "纸",
+          title: "吉祥壁纸",
+          body: "按五行增强吉气 — 工作、人缘、财运，少些障碍。",
         },
         {
-          hanzi: "AI",
-          title: "U Destiny · AI 占星",
-          body: "馆的活平台。Wobazi 是你手里的八字盘；更深的解读，仍与 Alice 一起完成。",
+          seal: "数",
+          title: "幸运数字",
+          body: "为你量身的吉数：电话、车牌、LINE 尾号。",
+        },
+        {
+          seal: "问",
+          title: "五问运势",
+          body: "365 天的每日运势：事业、财运、感情、tips 与建议。",
+        },
+        {
+          seal: "言",
+          title: "每日金句",
+          body: "每日一句，让你靠近真正重要的人与事。",
+        },
+        {
+          seal: "爱",
+          title: "爱情运势",
+          body: "每月情缘，以及让爱保持新鲜的祝福与做法。",
+        },
+        {
+          seal: "周",
+          title: "本周性格",
+          body: "这一周你会遇见什么，以及带你走过去的性格。",
+        },
+        {
+          seal: "日",
+          title: "吉日",
+          body: "开工、开业、购车、签约的好日子。",
+        },
+        {
+          seal: "宅",
+          title: "八字 · 风水",
+          body: "家、办公室、工厂、公司的风水提示。",
+        },
+        {
+          seal: "护",
+          title: "护身与器物",
+          body: "香薰蜡烛、水晶、手链等灵性用品。",
+        },
+        {
+          seal: "文",
+          title: "文章",
+          body: "写给对灵性好奇的人。",
         },
       ],
     },
-    elements: {
-      kicker: "五行",
-      title: "五种力量，从不静止。",
-      lead: "盘中万物不外木火土金水。平衡 — 或失衡 — 就是一生的天气。",
-      generating: "相生 · 一气生下一气",
-      quote: "八字是天气预报，不是无期徒刑。盘显示地形 — 怎么走，仍由你选。",
-      quoteAttr: "师傅们常用的比喻",
-    },
-    alice: {
-      kicker: "解盘人",
-      title: "Master Alice",
-      lead: "曼谷的中国玄学导师、命理顾问与企业培训师。Wobazi 是她的八字解读。U Destiny 是托住它的馆。",
-      pillars: [
-        {
-          hanzi: "年",
-          label: "年柱 · 根",
-          theme: "来处",
-          lines: [
-            "曼谷大学传播艺术硕士",
-            "农业大学大众传播学士",
-            "利兹城市大学市场营销课程",
-          ],
-        },
-        {
-          hanzi: "月",
-          label: "月柱 · 事业",
-          theme: "曾经的房间",
-          lines: [
-            "曾任市场传播高管",
-            "Huawei · JobsDB · Samsung · Lenovo",
-            "Canon · Toshiba · Grab",
-          ],
-        },
-        {
-          hanzi: "日",
-          label: "日柱 · 自己",
-          theme: "属于她的工作",
-          lines: [
-            "十五年八字、风水、面相与命理咨询",
-            "四十余张专业证书 — 香港、新加坡、马来西亚",
-            "认证 Thai Birkman · 声音疗愈导师",
-          ],
-        },
-        {
-          hanzi: "时",
-          label: "时柱 · 传承",
-          theme: "留在房间里的",
-          lines: [
-            "学员与客户逾万人，遍及三十余国",
-            "为七十余家机构培训与演讲",
-            "Wobazi — 她的解读，在你口袋里",
-          ],
-        },
-      ],
-    },
-    wobazi: {
-      kicker: "口袋里",
-      title: "Wobazi 是她的解读。",
-      lead: "几秒排出四柱 — 公历或农历，无需账号。只有想保存命盘时，才需要登录。",
-      points: [
-        "日主、五行平衡、大运",
-        "今日运势、流年、与你相合的人",
-        "问神谕 — 从你的命盘长出的 AI 指引",
-      ],
-      cta: "打开 Wobazi",
-    },
-    close: {
-      kicker: "起",
-      title: "你的四柱在等你。",
-      lead: "命盘只是故事的三分之一。时机与你所在的房间写其余。从八个字开始。",
-      cta: "排出你的命盘",
-      cta2: "前往 Master Alice",
+    partners: { kicker: "同行", title: "Our Partner" },
+    contact: {
+      kicker: "找到我们",
+      title: "联系我们",
+      lead: "写信、用 LINE，或在你已经在用的渠道找到 U Destiny。",
+      emailLabel: "E-mail",
+      line: "LINE",
     },
     footer: {
-      blurb: "曼谷的中国玄学馆。八字、风水、AI 占星 — 出自 Ultimate Destiny。",
-      house: "馆",
-      products: "解读",
-      bangkok: "曼谷",
+      blurb: "以 AI 理解自己。每日指南，成为更好的自己。",
+      contact: "联系我们",
+      about: "关于我们",
+      wobazi: "也可在 Wobazi 排盘",
+      copy: "Copyright By UDestiny, All Rights Reserved.",
     },
   },
 };
@@ -517,10 +423,25 @@ export const PILLAR_META = [
   { hanzi: "时", en: "Hour", pinyin: "Shí", about: "Inner world · what you build after 40" },
 ] as const;
 
-export const ELEMENTS = [
-  { hanzi: "木", en: "Wood", pinyin: "Mù", key: "wood", line: "Growth · vision · the upward path" },
-  { hanzi: "火", en: "Fire", pinyin: "Huǒ", key: "fire", line: "Passion · warmth · the outward light" },
-  { hanzi: "土", en: "Earth", pinyin: "Tǔ", key: "earth", line: "Stability · trust · the ground underfoot" },
-  { hanzi: "金", en: "Metal", pinyin: "Jīn", key: "metal", line: "Clarity · justice · the cutting edge" },
-  { hanzi: "水", en: "Water", pinyin: "Shuǐ", key: "water", line: "Wisdom · depth · the unseen current" },
-] as const;
+export const PARTNERS = [
+  { alt: "VANAPAN", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/3807c131-4119-4703-a8c5-dcb71dbb75ca" },
+  { alt: "Tops Care", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/f4edfb8d-4b0f-4cc5-be76-642a8aef3207" },
+  { alt: "Smart me", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/6462d946-0ff7-487f-9b36-605bb1c0c653" },
+  { alt: "Tops Vita", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/1695f501-711f-4ac0-8c81-a89847e2ba2b" },
+  { alt: "AIS", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/4eee5298-8aba-44bf-a4d6-ee51bbefa47a" },
+  { alt: "PET'N ME", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/0ccb8d12-8c5f-4ed3-b456-c84dd2da7487" },
+  { alt: "CATS", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/bc5235a2-a9b8-4965-b47c-a71be9594609" },
+  { alt: "SPARK", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/1a32fccc-64a6-4112-b091-fdfd6c69c936" },
+  { alt: "SYNCS", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/f5e12d2e-3c3e-4975-b8fc-57b9cacb8d39" },
+  { alt: "ANDALA", src: "https://udestiny-cms-u58935.vm.elestio.app/assets/3bcff061-eaf6-4913-b616-1e0c47ca9e00" },
+];
+
+export const SOCIALS = [
+  { name: "Facebook", href: "https://www.facebook.com/UdestinyAi" },
+  { name: "Instagram", href: "https://www.instagram.com/udestinyai/" },
+  { name: "LINE", href: "https://lin.ee/iI4t8Bj" },
+  { name: "WhatsApp", href: "https://chat.whatsapp.com/CqiLt1JMmPA98qyM1nzE29" },
+  { name: "Telegram", href: "https://t.me/+OxWWwoXC_8AwZjk1" },
+  { name: "TikTok", href: "https://www.tiktok.com/@udestinyai" },
+  { name: "YouTube", href: "https://www.youtube.com/@UDestiny" },
+];

@@ -8,6 +8,7 @@ const EMAIL = "mailto:info@udestinyglobal.com";
 const WOBAZI = "https://wobazi.com";
 const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
 const wobaziLogo = `${import.meta.env.BASE_URL}wobazi-logo.png`;
+const wobaziPhone = `${import.meta.env.BASE_URL}wobazi-phone.png`;
 
 function useReveal(dep: unknown) {
   useEffect(() => {
@@ -195,13 +196,14 @@ export default function App() {
               </div>
 
               <a className="wobazi-callout reveal" href={WOBAZI} id="wobazi">
-                <img src={wobaziLogo} alt="Wobazi" className="wobazi-logo" />
                 <div className="wobazi-copy">
+                  <img src={wobaziLogo} alt="Wobazi" className="wobazi-logo" />
                   <p className="kicker">{t.wobazi.kicker}</p>
                   <h3>{t.wobazi.title}</h3>
                   <p>{t.wobazi.lead}</p>
+                  <span className="btn btn-primary wobazi-cta">{t.wobazi.cta}</span>
                 </div>
-                <span className="btn btn-primary wobazi-cta">{t.wobazi.cta}</span>
+                <img src={wobaziPhone} alt="Wobazi on iPhone" className="wobazi-phone" />
               </a>
             </div>
           </section>
@@ -315,7 +317,7 @@ function SocialGlyph({ id }: { id: (typeof SOCIALS)[number]["id"] }) {
     case "line":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M19.37 11.2c0-4.03-4.05-7.31-9.03-7.31S1.3 7.17 1.3 11.2c0 3.62 3.21 6.65 7.54 7.22.29.06.69.19.79.44.09.22.06.58.03.8l-.13.8c-.04.24-.19 1.05.92.58 1.11-.48 5.98-3.52 8.16-6.03 1.5-1.64 2.76-3.3 2.76-3.81zm-12.2.97H5.96c-.27 0-.48-.2-.48-.47V8.9c0-.26.21-.47.48-.47s.49.21.49.47v2.33h1.21c.27 0 .48.21.48.47 0 .27-.21.47-.48.47zm1.7-.47c0 .27-.22.47-.49.47s-.48-.2-.48-.47V8.9c0-.26.21-.47.48-.47s.49.21.49.47zm4.37.47h-2.18c-.27 0-.48-.2-.48-.47V8.9c0-.26.21-.47.48-.47h2.18c.27 0 .48.21.48.47 0 .27-.21.47-.48.47h-1.7v.47h1.7c.27 0 .48.2.48.47s-.21.47-.48.47h-1.7v.46h1.7c.27 0 .48.21.48.47 0 .27-.21.48-.48.48zm3.4-.06-1.5-2.16V11.7c0 .27-.21.47-.48.47s-.49-.2-.49-.47V8.9c0-.2.13-.38.31-.44.19-.07.4 0 .51.16l1.5 2.16V8.9c0-.26.22-.47.49-.47s.48.21.48.47v2.8c0 .2-.12.38-.31.45-.18.06-.39 0-.51-.17z" />
+          <path fill="currentColor" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
         </svg>
       );
     case "whatsapp":

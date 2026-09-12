@@ -66,8 +66,8 @@ export const copy: Record<Lang, Copy> = {
     },
     splash: { waiting: "Opening the chart…" },
     hero: {
-      eyebrow: "AI Astrology",
-      title: "Your daily guide to a better you",
+      eyebrow: "U Destiny",
+      title: "Decode Inner,\nPerform Outer",
       lead: "An AI-powered self-understanding platform, guided by wisdom to help you understand yourself, feel empowered, and live with greater happiness.",
     },
     wobazi: {
@@ -190,8 +190,8 @@ export const copy: Record<Lang, Copy> = {
     },
     splash: { waiting: "กำลังเปิดดวง…" },
     hero: {
-      eyebrow: "AI Astrology",
-      title: "ไกด์รายวัน สู่ตัวคุณที่ดีกว่า",
+      eyebrow: "U Destiny",
+      title: "Decode Inner,\nPerform Outer",
       lead: "แพลตฟอร์มที่ใช้ AI + ศาสตร์การเข้าใจตัวเอง เป็น guideline เพื่อให้คุณเข้าใจตัวเอง มีพลัง และมีความสุข",
     },
     wobazi: {
@@ -314,8 +314,8 @@ export const copy: Record<Lang, Copy> = {
     },
     splash: { waiting: "正在开盘…" },
     hero: {
-      eyebrow: "AI Astrology",
-      title: "每日指南，成为更好的自己",
+      eyebrow: "U Destiny",
+      title: "Decode Inner,\nPerform Outer",
       lead: "一个以 AI 驱动的自我理解平台，以智慧为指引，帮助你认识自己、获得力量，并活得更幸福。",
     },
     wobazi: {

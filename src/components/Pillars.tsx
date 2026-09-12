@@ -35,15 +35,12 @@ export default function Pillars() {
                 ✦
               </span>
             )}
-            <div className="pillar-label">{p.hanzi}</div>
             <div className="pillar-stem" key={`s${stem}${tick[i]}`}>
               {stem}
             </div>
             <div className="pillar-branch" key={`b${branch}${tick[i]}`}>
               {branch}
             </div>
-            <div className="pillar-en">{p.en}</div>
-            <p className="pillar-about">{p.about}</p>
           </article>
         );
       })}

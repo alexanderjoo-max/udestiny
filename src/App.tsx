@@ -146,7 +146,7 @@ export default function App() {
                 <p className="kicker">{t.wobazi.kicker}</p>
                 <h1 className="display">{t.hero.title}</h1>
                 <p className="hero-lead">{t.hero.lead}</p>
-                <a className="btn btn-primary" href={WOBAZI}>
+                <a className="btn btn-wobazi" href={WOBAZI}>
                   {t.wobazi.cta}
                 </a>
               </div>

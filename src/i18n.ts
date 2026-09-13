@@ -71,7 +71,7 @@ export const copy: Record<Lang, Copy> = {
       lead: "Understand yourself from within so you can bring your full potential into the outside world.",
     },
     wobazi: {
-      kicker: "Also from U Destiny",
+      kicker: "U Destiny presents Wobazi.com",
       title: "Plot your BaZi chart",
       lead: "Wobazi is Master Alice’s Four Pillars reading — free, no account needed.",
       cta: "Open Wobazi",
@@ -195,7 +195,7 @@ export const copy: Record<Lang, Copy> = {
       lead: "เข้าใจตัวเองจากข้างใน เพื่อแสดงศักยภาพออกมาอย่างเต็มที่ในโลกภายนอก",
     },
     wobazi: {
-      kicker: "จาก U Destiny",
+      kicker: "U Destiny นำเสนอ Wobazi.com",
       title: "จัดแผนภูมิปาจื้อของคุณ",
       lead: "Wobazi คือการอ่านสี่เสาของมาสเตอร์อลิซ — ฟรี ไม่ต้องมีบัญชี",
       cta: "เปิด Wobazi",
@@ -319,7 +319,7 @@ export const copy: Record<Lang, Copy> = {
       lead: "从内在理解自己，才能把全部潜能带到外面的世界。",
     },
     wobazi: {
-      kicker: "同样来自 U Destiny",
+      kicker: "U Destiny 呈献 Wobazi.com",
       title: "排出你的八字命盘",
       lead: "Wobazi 是 Master Alice 的四柱解读 — 免费，无需账号。",
       cta: "打开 Wobazi",
